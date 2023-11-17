@@ -1,6 +1,7 @@
 name: Industrialisation continue sur le serveur AWS (Tomcat)
 on: push
 jobs:
+  job1:
   Deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -19,7 +20,8 @@ jobs:
         target: "/opt/tomcat/webapps",
 name: Sauvegarde d'un fichier sur le réseau IPFS
 on: push
-jobs:
+  job2:
+  need: job1
   Deploy:
     name: Deploy
     runs-on: ubuntu-latest
